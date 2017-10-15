@@ -31,8 +31,13 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testNewLineWithNumbers() {
+	public void testNewLine() {
 		assertEquals(6, Calculator.add("1\n2\n3"));
+	}
+
+	@Test
+	public void testBothNewLineAndCommas() {
+		assertEquals(6, Calculator.add("1\n2,3"));
 	}
 
 
