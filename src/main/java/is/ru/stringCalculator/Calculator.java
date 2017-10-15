@@ -11,6 +11,10 @@ public class Calculator {
 				String numbers[] = text.split(",");
 				return sum(numbers);
 			}
+			if(text.contains("\n")){
+				String numbers[] = text.split("\n");
+				return sum(numbers);
+			}
 			return 1;
 		}
 	}
@@ -26,4 +30,4 @@ public class Calculator {
 		}
 		return total;
 	}
-}
+}	
