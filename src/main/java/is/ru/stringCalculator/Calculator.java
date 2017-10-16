@@ -4,27 +4,14 @@ package is.ru.stringCalculator;
 public class Calculator {
 	
 	public static int add(String text) {
-		String numbers[] =  new String[0];
+		String[] numbers =  text.split(",|\n");
 
 		if(text.equals(""))
 			return 0;
 		else{
 
-			if(text.contains(",") && text.contains("\n")){
-				numbers = text.split("\n|\\,");
-				return sum(numbers);
-			}
-			else if(text.contains(",")){
-				numbers = text.split(",");
-				return sum(numbers);
-			}
-			else if(text.contains("\n")){
-				numbers = text.split("\n");
-				return sum(numbers);
-			}
+			return sum(numbers);
 
-
-			return 1;
 		}
 	}
 
