@@ -1,14 +1,10 @@
 package is.ru.stringCalculator;
-import static org.junit.rules.ExpectedException;
+
 
 public class Calculator {
 	
 	public static int add(String text) {
 		String numbers[] =  new String[0];
-
-		/*if(Integer.parseInt(text) < 0){
-			throw new exception("Negatives not allowed: " + Integer.parseInt(text));
-		}*/
 
 		if(text.equals(""))
 			return 0;
@@ -36,13 +32,27 @@ public class Calculator {
 
 		return Integer.parseInt(number);
 	}
-
+	
 	private static int sum(String [] numbers){
 
 		int total = 0;
+		int [] negNumbers = new int[0];
+
 		for(String number : numbers){
-			total += toInt(number);
+			int numberInt = Integer.parseInt(number.trim());
+			/*if (numberInt < 0) {
+              negNumbers[numberInt];
+              
+          	}*/
+			if(numberInt <= 1000) {
+				total += numberInt;
+			}
 		}
+
+		/*if (isNegative == true) {
+          throw new RuntimeException("Negatives not allowed: " + );
+        }*/
+
 		return total;
 	}
-}	
+}

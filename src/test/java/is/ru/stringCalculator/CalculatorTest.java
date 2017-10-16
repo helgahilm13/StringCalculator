@@ -40,10 +40,15 @@ public class CalculatorTest {
 		assertEquals(6, Calculator.add("1\n2,3"));
 	}
 
-	@Test
-	public void testNegativeNumber() {
-		assertEquals("Negatives not allowed: -1", Calculator.add("-1"));
-	}
+	/*@Test
+	(expected = RuntimeException.class)
+	public void testNegativeNumberException() {
+    	assertEquals(Calculator.add("3,-6,15,18,46,33"));
+	}*/
 
+	@Test
+	public void testNumbersBiggerThan1000() {
+    	assertEquals(1015, Calculator.add("5,1000,1010,10,1500"));
+	}
 
 }
